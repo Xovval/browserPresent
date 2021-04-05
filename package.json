@@ -1,0 +1,24 @@
+{
+  "name": "open-presents",
+  "version": "0.1.0",
+  "description": "A light, open-source presentation software",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xovval/browserPresent.git"
+  },
+  "keywords": [],
+  "author": "Axel Bauer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xovval/browserPresent/issues"
+  },
+  "homepage": "https://github.com/Xovval/browserPresent#readme",
+  "devDependencies": {
+    "electron": "^12.0.2"
+  }
+}
