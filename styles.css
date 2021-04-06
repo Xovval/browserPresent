@@ -1,0 +1,12 @@
+*{padding:0;margin:0;outline:none;}
+body{font-family: Arial, Helvetica, sans-serif;}
+#wrapper{display:grid;grid-template-columns: 300px 1fr;grid-template-rows: 100%;grid-template-areas:"aside main";position:absolute;top:70px;left:0;right:0;bottom:0;overflow:hidden;}
+main{padding:15px;grid-area:"main";min-width:400px;}
+h3{padding:25px 5px;text-transform: uppercase;}
+aside{background-color:#EEE;padding:15px;grid-area:"aside";color:#666}
+nav{border-bottom:1px solid #DDD;padding:20px;position:fixed;top:0;left:0;right:0;z-index:99}
+button{background-color:#09C;color:white;padding:13px 30px;border:0;font-size:16pt;border-radius:10px;transition: 0.5s;text-align: center;margin:0 auto}
+button:hover{background-color: rgb(111, 195, 255);}
+button:active{background-color:#07C;box-shadow:2px 1px 3px black;transition: 0.1s;}
+
+#application_name{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:20pt;padding-left:20px}
