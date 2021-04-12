@@ -5,30 +5,87 @@
     <title>Open Presents</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body style="background: white;">
-    <nav><img src="#"><span id="application_name">OPEN-PRESENTS</span></nav>
+    <header>
+        <img src="#">
+        <span id="application_name">OPEN-PRESENTS</span>
+        <span id="errorMessage">ErrorMessage-Test</span>
+    </header>
 
     <section id="wrapper">
-        <aside id="menu">
-            <button>New Project</button>
+        <aside>
+            <button class="button1">New Project</button>
             <h3>Your projects</h3>
             <div id="projects">
                 <!--Here comes the JSON data-->
+                <!--<div>Projekt</div>-->
+
+                <div>Projekt</div>
+                <div>Projekt</div>
+                <div>Projekt</div>
+                <div>Projekt</div>
+                <div>Projekt</div>
+                <div>Projekt</div>
+                <div>Projekt</div>
+                <div>Projekt</div>
+                <div>Projekt</div>
+                <div>Projekt</div>
+                <div>Projekt</div>
+
+
             </div>
         </aside>
 
         <main>
-            <welcome><h1 class="title">Welcome to Open Presentations!</h1></welcome>
+            <div id="welcome"><h1 class="title">Welcome to Open Presentations!</h1></div>
 
-            <editor>
+            <div id="editor"><!-- Man kann nur bestimmte Dateiformate einspeisen -> wenn diese erkannt werden (und vom Browser unterstützt) dann
+                        werden sie einem jeweiligen Objekt zugewiesen (mp4 -> Video, Youtube embeded -> Iframe Link)-->
                 <!--Button oben rechts -> save, delete-->
                 <!--Name oben links-->
         
-                <!-- Add page-->
-            </editor>
+                <!-- Add page (tinymce editor?)-->
+                <!--Add Picture-->
+
+                
+                <div id="editor_menu">
+                    <div id="editor_menu_left">
+                        <label for="projectID">Title:&nbsp;</label>
+                        <input id="projectID" class="projectTitle" value="Unnamed Project"></input>
+                    </div>
+                    <div id="editor_menu_right">
+                        <button id="present" class="button2">Present</button>
+                        <button id="save" class="button2">Save</button>
+                        <button id="delete" class="button2">Delete</button>
+                    </div>
+                </div>
+
+                <div id="pagewrapper">
+                    <div id="pageID" class="page">
+                        <div class="pageNumber">PAGE 1</div>
+                        <textarea id="mytextarea"></textarea>
+                        <button class="button1 button3">Add Picture</button>
+                    </div>
+
+
+                    <button class="button1 button3">Add Page</button>
+                </div>
+            </div>
         </main>
     </section>
 </body>
 </html>
 
+<!--
+    Todo: 
+    - height bei vertikalem Scrollen fehlerhaft bei Full-Screen
+    - Folien entfernen, Colour, BG, Foto entfernen
+    - Eigener Bereich für Titelbild
+    - Neues Fenster bei Präsentation
+    - Erinnerung zum Speichern bzw. beim Löschen
+    - Automatisches Update -> https://medium.com/cameron-nokes/how-to-store-user-data-in-electron-3ba6bf66bc1e
+    - Tastenkombinationen
+    - Schaltfläche für Hintergrundbild oder Video
+-->

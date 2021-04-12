@@ -7,4 +7,8 @@ window.addEventListener('DOMContentLoaded', () => {
     for (const type of ['chrome', 'node', 'electron']) {
       replaceText(`${type}-version`, process.versions[type])
     }
+
+    tinymce.init({
+      selector: '#mytextarea' //TODO update this to a better selector (there should be more editors possible!)
+    });
   })

@@ -1,12 +1,39 @@
-*{padding:0;margin:0;outline:none;}
-body{font-family: Arial, Helvetica, sans-serif;}
-#wrapper{display:grid;grid-template-columns: 300px 1fr;grid-template-rows: 100%;grid-template-areas:"aside main";position:absolute;top:70px;left:0;right:0;bottom:0;overflow:hidden;}
-main{padding:15px;grid-area:"main";min-width:400px;}
-h3{padding:25px 5px;text-transform: uppercase;}
+*{padding:0;margin:0;outline:none;overflow:hidden}
+body{font-family: Arial, Helvetica, sans-serif; user-select: none;}
+#wrapper{display:grid;grid-template-columns: 300px 1fr;grid-template-rows: 100%;grid-template-areas:"aside main";position:absolute;top:70px;left:0;right:0;bottom:0;border-top:1px solid #DDD;}
+main{grid-area:"main";min-width:400px;text-align: center;}
+h3{padding:25px 5px 10px;text-transform: uppercase;}
 aside{background-color:#EEE;padding:15px;grid-area:"aside";color:#666}
-nav{border-bottom:1px solid #DDD;padding:20px;position:fixed;top:0;left:0;right:0;z-index:99}
-button{background-color:#09C;color:white;padding:13px 30px;border:0;font-size:16pt;border-radius:10px;transition: 0.5s;text-align: center;margin:0 auto}
-button:hover{background-color: rgb(111, 195, 255);}
-button:active{background-color:#07C;box-shadow:2px 1px 3px black;transition: 0.1s;}
+header{padding:20px;position:fixed;top:0;left:0;right:0;z-index:99;background-color:white}
+button{cursor:pointer}
+input{border:0;background-color:#EEE;border-radius:10px;padding: 10px 10px;transition:0.5s}
+input:focus{background-color:#DDD}
+.button1{background-color:#09C;color:white;padding:13px 30px;border:0;font-size:16pt;border-radius:10px;transition: 0.5s;text-align: center;margin:0 auto}
+.button1:hover{background-color: rgb(111, 195, 255);}
+.button1:active{background-color:#07C;box-shadow:2px 1px 3px black;transition: 0.1s;}
+#welcome{padding:15px}
+
+.button2 {padding: 5px 10px; background-color:white; color:grey;border:1px solid grey;font-size:10pt;border-radius:4px;box-shadow:0px 0 1px rgba(0, 0, 0, 0.8)}
+.button2:hover {background-color:#EEE;color:grey}
+.button2:active {background-color:#CCC;color:black;box-shadow: 0 0 3px black;}
+
+.button3 {display:block;background-color:#09C;color:white;padding: 8px 15px;border:0;font-size:12pt;border-radius:10px;transition: 0.5s;text-align: center;margin:0 auto;}
+
+#editor_menu {border-bottom: 1px solid #DDD; padding: 10px 10px;display:grid;align-items:center;grid-template-areas: "Title Buttons";grid-template-rows: 100%;grid-template-columns: 1fr 1fr;}
+#editor_menu_right {text-align: right;grid-area: "Buttons";}
+#editor_menu_left {text-align: left;grid-area: "Title";}
+#editor{height:100%}
+
+#projects {overflow-y: scroll;height:100%;}
+#projects div {padding: 12px 30px;overflow:hidden;transition: 1.5s;}
+#projects div:hover {background-color:#DDD;cursor:pointer;transition:0s;}
+#projects div:active {background-color:#CCC;cursor:pointer}
+
+
+#pagewrapper {overflow-y:scroll;height:100%;max-height:385px;}
+.pageNumber {text-align:left;padding:20px;color:grey;}
+
+textarea {resize: none;width:90%;height: 300px;overflow-y: scroll;margin:0 auto 10px;padding:10px;font-size:12pt;}
+#errorMessage{color:red;}
 
 #application_name{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:20pt;padding-left:20px}
